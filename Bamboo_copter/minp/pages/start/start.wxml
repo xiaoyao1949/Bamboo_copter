@@ -1,0 +1,9 @@
+<!--pages/start/start.wxml-->
+<view class='logo'>
+<image src='/image/logo.webp' mode='aspectFit' class='img'></image>
+</view>
+
+<view class='enter'>
+<button bindtap='go_to_index' class='bt'>进入小程序</button>
+</view>
+

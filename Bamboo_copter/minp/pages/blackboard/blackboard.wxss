@@ -1,0 +1,17 @@
+/* pages/blackboard/blackboard.wxss */
+
+.switcher{
+  width: 80%;
+  margin: auto;
+}
+.tab{
+  width: 30%;
+  display: inline-block;
+  text-align: center;
+  font-size: 33rpx;
+  color: white;
+}
+.active{
+  color: orange;
+  font-weight: bold;
+}

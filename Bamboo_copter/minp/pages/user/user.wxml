@@ -1,0 +1,20 @@
+<!--pages/user/user.wxml-->
+
+<!-- ############################### -->
+<button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+
+<block wx:else>
+  <view class='face'>
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="aspectFit"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+<view >{{userInfo.country}}--{{userInfo.province}}--{{userInfo.city}}</view>
+  </view>
+
+  <view class='tel_phone' bindlongtap='modify_phone'>
+  {{phone}}
+  </view>
+  <view bindtap='jump_to_my_history'>历史订单</view>
+  <view>定位权限，获取当前城市</view>
+  <view>黑名单</view>
+</block>
+<!-- ############################### -->

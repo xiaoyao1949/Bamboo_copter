@@ -1,0 +1,22 @@
+/* pages/user/user.wxss */
+.face{
+  width: 100%;
+  height: 300rpx;
+  padding-top: 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  margin: 20rpx;
+}
+.userinfo-nickname {
+  display: block;
+  padding: auto;
+  padding-bottom: 40rpx;
+  text-align: center;
+  color: #000;
+}

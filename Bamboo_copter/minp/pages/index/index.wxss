@@ -1,0 +1,11 @@
+/**index.wxss**/
+
+
+
+.add_travel{
+  width: 100%;
+  margin-bottom: 30rpx;
+}
+.bt_add_travel{
+  width: 60%;
+}

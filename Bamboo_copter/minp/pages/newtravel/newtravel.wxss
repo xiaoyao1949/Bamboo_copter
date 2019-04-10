@@ -1,0 +1,57 @@
+/* pages/newtravel/newtravel.wxss */
+.title{
+  width: 100%;
+  height: 100rpx;
+  text-align: center;
+  padding-top: 40rpx;
+  font-size: 40rpx;
+  color: white;
+  font-weight: bold;
+}
+.line{
+  width: 100%;
+  height: 80rpx;
+
+  /* background-color: yellow; */
+  border-top-style: solid;
+  border-top-width: 1rpx;
+  border-top-color: rgb(183, 196, 219); 
+
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.form_desc{
+  font-size: 35rpx;
+  color: white;
+  padding-left: 40rpx;
+  width: 30%;
+  /* background: green; */
+  text-align: left;
+}
+.form_cont{
+  width: 60%;
+  font-size: 35rpx;
+  /* background: gray; */
+  text-align: left;
+  align-self: center;
+}
+.more{
+  color:orange;
+}
+.needknow{
+  color: red;
+}
+.ack{
+  padding-left: 40rpx;
+}
+.bt_area{
+  margin-top: 50rpx;
+  margin-bottom: 20rpx;
+}
+.bt_item{
+  width: 60%;
+  margin: auto;
+  margin-bottom: 40rpx;
+}

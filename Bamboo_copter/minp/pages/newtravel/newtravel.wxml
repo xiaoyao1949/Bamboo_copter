@@ -1,0 +1,83 @@
+<!--pages/newtravel/newtravel.wxml-->
+<!-- =========================================================== -->
+<view class="title">
+  {{type}}
+</view>
+
+<form bindsubmit="formSubmit">
+
+  <view class="line">
+    <text class='form_desc'>从</text>
+    <view class="form_cont">
+      <picker mode="region" bindchange="bindRegionChange_from" value="{{from_addr}}">
+      <text space="nbsp">{{from_addr[0]}}  {{from_addr[1]}}  {{from_addr[2]}}</text>  
+      </picker>
+    </view>
+  </view>
+
+  <view class="line">
+    <text class='form_desc'></text>
+    <view class='form_cont'><input value='' placeholder='选填，具体上车地点' confirm-type='done' bindblur='from_desc_change'/></view>
+  </view>
+
+  <view class="line">
+    <text class='form_desc'>到</text>
+    <view class="form_cont">
+      <picker mode="region" bindchange="bindRegionChange_to" value="{{to_addr}}">
+      <text space="nbsp">{{to_addr[0]}}  {{to_addr[1]}}  {{to_addr[2]}}</text>  
+      </picker>
+    </view>
+  </view>
+  <view class="line" bindtap=''>
+    <text class='form_desc'></text>
+    <view class='form_cont'><input value='' placeholder='选填，具体下车地点' confirm-type='done' bindblur='to_desc_change'/></view>
+  </view>
+
+  <view class="line">
+    <text class='form_desc'>出发时间</text>
+    <view class="form_cont">
+      <picker mode="multiSelector" bindtap='pickerTap' bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+      <text space="nbsp">{{multiArray[0][multiIndex[0]]}} {{multiArray[1][multiIndex[1]]}}</text>  
+      </picker>
+    </view>
+  </view>
+
+  <view class="line">
+    <text class='form_desc'>{{type == '车找人'?"剩余座位":"人数"}}</text>
+    <view class="form_cont">
+      <picker bindchange="change_require" value="{{r_index}}" range="{{require}}">
+      <text space="nbsp">{{require[r_index]}}</text>  
+      </picker>
+    </view>
+  </view>
+
+  <block wx:if="{{!hidemore}}">
+    <view class="line">
+      <text class='form_desc more' bindtap='seemore'>更多选项</text>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="line" bindtap=''>
+      <text class='form_desc'>手机号</text>
+      <view class='form_cont'><input type='number' maxlength="11" value="{{phone}}" placeholder="{{placeholder_phone}}" confirm-type='done' bindblur='change_phone'/></view>
+    </view>
+    <view class="line" bindtap=''>
+      <text class='form_desc'>说明</text>
+      <view class='form_cont'><input placeholder="选填，随便说点" confirm-type='done' bindblur='change_comment'/></view>
+    </view>
+  </block>
+
+  <view class="line">
+    <checkbox-group bindchange="checkboxChange">
+      <label class="ack">
+        <checkbox value='ack' /> 我已经详细阅读
+      </label>
+      <text class='needknow' bindtap='show_me_declare'>《用户须知》</text>
+    </checkbox-group>
+  </view>
+
+  <view class='bt_area'>
+    <button class="bt_item" type='primary' formType="submit" disabled='{{!ack}}'>发布行程</button>
+    <button class="bt_item" type='warn' bindtap='go_back_to_index'>返回首页</button>
+  </view>
+</form>

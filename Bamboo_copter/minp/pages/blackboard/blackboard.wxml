@@ -1,0 +1,54 @@
+<!--pages/blackboard/blackboard.wxml-->
+<view class="switcher">
+  <text class='tab {{switcher_style[0]}}' bindtap='all'>全部</text>
+  <text class='tab {{switcher_style[1]}}' bindtap='czr'>车找人</text>
+  <text class='tab {{switcher_style[2]}}' bindtap='rzc'>人找车</text>
+</view>
+
+<view class="travels">
+
+  <view class="travel-item" wx:for="{{all_travels}}"  wx:key="{{item.tid}}" bindtap='detail_the_travel' style='display:{{item.show}}' data-tid='{{item.tid}}'>
+    <!-- 行程走向 -->
+    <view class='fate'>
+      <text class="addr">{{item.from_addr}}</text>
+
+      <view wx:if="{{item.is_grouped}}" style='display:inline-block'>
+        <text class="arrow" style='background:green'>---></text>
+      </view>
+
+      <view wx:else style='display:inline-block'>
+        <text class="arrow" style='background:red'>---></text>
+      </view>
+
+      <text class="addr">{{item.to_addr}}</text>
+    </view>
+    <!-- 出发时间 -->
+    <view class='go_time'>{{item.go_date}}(几天后/今天){{item.go_time}}出发</view>
+
+    <!-- 车找人还是人找车 -->
+    <view wx:if="{{item.is_driver}}">
+      <!-- 如果是司机，说明车找人 -->
+      <view>车找人</view>
+      <text>剩</text>
+      <text>{{item.require}}</text>空座
+    </view>
+
+    <view wx:else>
+      <!-- 如果是人找车 -->
+      <view>人找车</view>
+
+      <view wx:if="{{item.require>0}}">
+        <!-- 坐人 -->
+        <text>共</text>
+        <text>{{item.require}}</text>
+        <text>人</text>
+      </view>
+
+      <view wx:else>捎东西</view>
+    </view>
+
+    <view wx:if="{{item.is_grouped}}" class="status">组好队的</view>
+    <view wx:else class="status">求组队</view>
+  </view>
+
+</view>

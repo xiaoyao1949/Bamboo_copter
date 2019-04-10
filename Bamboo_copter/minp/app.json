@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/start/start",
+    "pages/index/index",
+    "pages/blackboard/blackboard",
+    "pages/user/user",
+    "pages/newtravel/newtravel",
+    "pages/mytraveldetail/mytraveldetail",
+    "pages/othertraveldetail/othertraveldetail",
+    "pages/userdetail/userdetail",
+    "pages/needknow/needknow",
+    "pages/myhistory/myhistory",
+    "pages/historydetail/historydetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1875b8",
+    "navigationBarTitleText": "竹蜻蜓",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#ffffff",
+    "selectedColor": "#000000",
+    "backgroundColor":"#1875b8",
+    "borderStyle":"white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "走起"
+      },
+      {
+        "pagePath": "pages/blackboard/blackboard",
+        "text": "众里寻他"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的"
+      }
+    ]
+  }
+}

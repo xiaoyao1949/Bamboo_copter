@@ -1,0 +1,56 @@
+/**app.wxss**/
+
+page {
+  /* 全局字体配置 */
+  font-size:28rpx; 
+  background-color:#1875b8;
+}
+
+.travels{
+  /* travel-item的容器 */
+  width: 100%;
+  /* background-color: green; */
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.travel-item {
+  /* 每一个行程小框的样式 */
+  width: 80%;
+  margin: auto;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+  padding: 20rpx 20rpx 40rpx 20rpx;
+  
+  /* border-style: solid; */
+  /* border-width: 5rpx; */
+  /* border-color: red; */
+
+  background-color:white;
+  align-items: left;
+  box-shadow: 5px 7px 5px #ebe5e5;
+  border-radius: 25rpx;
+}
+.fate{
+  width: 100%;
+  margin-bottom: 20rpx;
+  padding-bottom: 20rpx;
+  border-bottom-style: dotted;
+  border-bottom-color: gray;
+  border-bottom-width: 1rpx;
+}
+.addr{
+  display: inline-block;
+  text-align: center;
+  width: 40%;
+}
+.arrow{
+  width: 10%;
+  text-align: center;
+  border-style:double;
+  border-color: gray;
+}
+.status{
+  float: right;
+}
